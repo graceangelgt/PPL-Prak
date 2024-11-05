@@ -7,6 +7,7 @@ use App\Http\Controllers\SeminarApplicationController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardMahasiswaController;
+use App\Http\Controllers\ProfileController;
 
 
 /*
@@ -125,9 +126,7 @@ Route::get('/jadwalSeminar', [SeminarApplicationController::class, 'index'])->na
 //     return view('formPengajuanSeminar');
 // });
 
-Route::get('/profilmh', function () {
-    return view('profilmh');
-});
+Route::get('/profilmh', [ProfileController::class, 'show'])->middleware('auth');
 
 # update database
 

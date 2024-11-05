@@ -144,7 +144,7 @@
                         <input type="text" id="nama-kelompok" name="nama-kelompok">
                     </div>
                     <div class="form-group">
-                        <button type="submit">Kirim</button>
+                    <a href="{{ url('/alertdosbing') }}" class="btn btn-primary">Kirim</a>
                     </div>
                 </form>
             </div>

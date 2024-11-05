@@ -140,23 +140,23 @@
                 <div class="profile-form">
                     <div class="form-group">
                         <label for="full-name">Nama Lengkap:</label>
-                        <p id="full-name">Eunike Alfrita MW</p>
+                        <p id="full-name">{{ Auth::user()->name }}</p>
                     </div>
                     <div class="form-group">
                         <label for="nim">NIM:</label>
-                        <p id="nim">187221053</p>
+                        <p id="nim">{{ Auth::user()->nim }}</p>
                     </div>
                     <div class="form-group">
                         <label for="program-study">Program Studi:</label>
-                        <p id="program-study">Sistem Informasi</p>
+                        <p id="program-study">{{ Auth::user()->program_studi }}</p>
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <p id="email">winwinhara@gamil.com</p>
+                        <p id="email">{{ Auth::user()->email }}</p>
                     </div>
                     <div class="form-group">
                         <label for="phone">Nomor HP:</label>
-                        <p id="phone">123456789</p>
+                        <p id="phone">{{ Auth::user()->no_hp }}</p>
                     </div>
                     <div class="form-group">
                         <label for="phone">Dosen Wali:</label>
