@@ -10,6 +10,7 @@ use App\Http\Controllers\DashboardMahasiswaController;
 use App\Http\Controllers\JadwalKonsultasiController;
 use App\Http\Controllers\BimbinganController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DosenController;
 
 
 
@@ -34,11 +35,12 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [DashboardMahasiswaController::class, 'index'])->name('dashboard')->middleware('auth');
 
-
-Route::get('/worda', function () {
-    return view('auto_proposal/auto_proposal');
-});
+// Route::get('/worda', function () {
+//     return view('auto_proposal/auto_proposal');
+// });
+Route::get('worda', [WordController::class, 'display']);
 Route::post('worda', [WordController::class, 'index'])->name("worda.index");
+
 Route::get('/formPengajuanDosbing', function () {
     return view('/mahasiswa/formPengajuanDosbing');
 });
@@ -62,9 +64,23 @@ Route::get('/laporanfiks', function () {
 });
 
 
-Route::get('/dashboardKoor', function () {
-    return view('pov_koor/dashboardKoor');
-});
+Route::get('/jadwalBimbingan', [JadwalKonsultasiController::class, 'index']);
+Route::post('/jadwalBimbingan', [JadwalKonsultasiController::class, 'store']);
+
+
+Route::get('/kartuKendaliBimbingan', [BimbinganController::class, 'index']);
+Route::post('/kartuKendaliBimbingan', [BimbinganController::class, 'store']);
+
+
+Route::get('/dashboardDosen', function () {
+    return view('dosen/dashboardDosen');
+})->name('dashboardDosen');
+
+
+Route::get('/anakBimbing', [DosenController::class, 'index'])->name("anakBimbing");
+Route::get('/detilLogbook/{user_id}', [LogbookController::class, 'dosen'])->name('detilLogbook');
+Route::get('/detilBimbingan/{user_id}', [JadwalKonsultasiController::class, 'dosen'])->name('detilBimbingan');
+
 
 Route::get('/tambahMahasiswa', function () {
     return view('tambahMahasiswa');
@@ -168,6 +184,25 @@ Route::get('/editpkl', function () {
 Route::get('/editpkl', function () {
     return view('editpkl');
 });
+
+Route::get('/assignPembimbing', function () {
+    return view('pov_koor/assignPembimbing');
+});
+
+Route::get('/daftarDosen', function () {
+    return view('pov_koor/daftarDosen');
+});
+
+Route::get('/pklAktif', function () {
+    return view('pov_koor/pklAktif');
+});
+
+Route::get('/formAssign', function () {
+    return view('pov_koor/formAssign');
+});
+
+Route::post('/uploadHasil/{id}', [JadwalKonsultasiController::class, 'uploadHasil'])->name('uploadHasil');
+Route::post('/uploadDokumentasi/{id}', [JadwalKonsultasiController::class, 'uploadDokumentasi'])->name('uploadDokumentasi');
 
 
 /*

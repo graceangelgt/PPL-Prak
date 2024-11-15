@@ -3,7 +3,7 @@
     <ul class="nav">
         <!-- Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="dashboardDosen">
+            <a class="nav-link" href="/dashboardDosen">
                 <i class="ti-home menu-icon"></i>
                 <span class="menu-title">Home</span>
             </a>
@@ -11,7 +11,7 @@
 
         <!-- Profil -->
         <li class="nav-item">
-            <a class="nav-link" href="dosenprofil">
+            <a class="nav-link" href="/dosenprofil">
                 <i class="ti-user menu-icon"></i>
                 <span class="menu-title">Profil</span>
             </a>
@@ -19,7 +19,7 @@
 
         <!-- Anak Bimbing -->
         <li class="nav-item">
-            <a class="nav-link" href="anakBimbing">
+            <a class="nav-link" href="/anakBimbing">
                 <i class="ti-id-badge menu-icon"></i>
                 <span class="menu-title">Anak Bimbing</span>
             </a>
@@ -27,22 +27,15 @@
 
         <!-- Bimbingan -->
         <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#konsuldosen" aria-expanded="false" aria-controls="konsul">
+            <a class="nav-link" data-toggle="collapse" href="#jadwalBimbinganDosen" >
                 <i class="ti-comments menu-icon"></i>
                 <span class="menu-title">Konsultasi Bimbingan</span>
-                <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="konsuldosen">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="jadwalBimbinganDosen">Jadwal Bimbingan</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="kartuKendaliDosen">Kartu Kendali</a></li>
-                </ul>
-            </div>
         </li>
 
         <!-- Logbook -->
         <li class="nav-item">
-            <a class="nav-link" href="logbookDosen">
+            <a class="nav-link" href="/logbookDosen">
                 <i class="ti-file menu-icon"></i>
                 <span class="menu-title">Logbook</span>
             </a>
@@ -50,7 +43,7 @@
 
         <!-- Laporan -->
         <li class="nav-item">
-            <a class="nav-link" href="laporanDosen">
+            <a class="nav-link" href="/laporanDosen">
                 <i class="ti-clipboard menu-icon"></i>
                 <span class="menu-title">Laporan</span>
             </a>
@@ -58,7 +51,7 @@
 
         <!-- Seminar -->
         <li class="nav-item">
-            <a class="nav-link" href="seminarDosen">
+            <a class="nav-link" href="/seminarDosen">
                 <i class="ti-book menu-icon"></i>
                 <span class="menu-title">Seminar</span>
             </a>
